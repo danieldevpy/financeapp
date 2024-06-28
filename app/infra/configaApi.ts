@@ -7,7 +7,7 @@ class ConfigUrl {
 
     // O construtor privado impede que a classe seja instanciada fora dela.
     private constructor() {
-        this.url = 'http://192.168.1.169:8000';
+        this.url = 'http://192.168.0.17:8000';
     }
 
     // Método estático para obter a instância da classe.

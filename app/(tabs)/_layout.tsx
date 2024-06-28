@@ -7,7 +7,7 @@ import { ThemeApp } from '@/assets/style/theme';
 
 export type RootStackParamList = {
   Tabs: undefined;
-  Month: undefined;
+  data_month: undefined;
   Category: undefined;
   Fixed: undefined;
 };
@@ -41,6 +41,14 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
           ),
+        }}
+      />
+      <Tabs.Screen
+        name="data_month"
+        options={{
+          href: null,
+          headerShown: true,
+          headerTitle: "Meus Meses",
         }}
       />
     </Tabs>

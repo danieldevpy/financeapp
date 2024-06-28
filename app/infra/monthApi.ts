@@ -23,7 +23,7 @@ class MonthApi{
         this.url = `${ConfigUrl.getInstance().url}/month`;
     }
 
-    getMonths(): Promise<Month>{
+    getMonths(): Promise<Month[]>{
     return new Promise(async(resolve, reject)=>{
         const response = await fetch(`${this.url}?type=all`)
         const response_json = await response.json();
@@ -37,7 +37,7 @@ class MonthApi{
             const response = await fetch(`${this.url}?type=last`)
             const response_json = await response.json();
             if(response.status !== 200) return reject(response_json);
-            console.log(response_json)
+            console.log('response', response_json)
             resolve(response_json);
         })
     }
